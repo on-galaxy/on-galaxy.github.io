@@ -26,14 +26,19 @@
       </section>
 
       <section class="panel">
-        <nav class="tabs" aria-label="Portfolio categories">
-          <button class="tab is-active" type="button" data-tab="about">about</button>
-          <button class="tab" type="button" data-tab="works">works</button>
-          <button class="tab" type="button" data-tab="contact">contact</button>
-        </nav>
-
-        <div class="panes">
-          <section class="pane is-active" data-pane="about">
+        <div class="accordion" aria-label="Portfolio categories">
+          <section class="accordion-item is-active">
+            <button
+              class="tab is-active"
+              type="button"
+              data-tab="about"
+              aria-expanded="true"
+              aria-controls="pane-about"
+            >
+              <span>about</span>
+              <span class="tab-arrow" aria-hidden="true"></span>
+            </button>
+            <section class="pane is-active" id="pane-about" data-pane="about">
             <p class="eyebrow">Profile</p>
             <p class="copy">
               Designer building calm, graphic-first digital experiences with a soft
@@ -41,7 +46,20 @@
             </p>
           </section>
 
-          <section class="pane" data-pane="works">
+          </section>
+
+          <section class="accordion-item">
+            <button
+              class="tab"
+              type="button"
+              data-tab="works"
+              aria-expanded="false"
+              aria-controls="pane-works"
+            >
+              <span>works</span>
+              <span class="tab-arrow" aria-hidden="true"></span>
+            </button>
+            <section class="pane" id="pane-works" data-pane="works">
             <p class="eyebrow">Selected Works</p>
             <div class="works-list">
               <article class="work-card">
@@ -163,7 +181,20 @@
             </div>
           </section>
 
-          <section class="pane" data-pane="contact">
+          </section>
+
+          <section class="accordion-item">
+            <button
+              class="tab"
+              type="button"
+              data-tab="contact"
+              aria-expanded="false"
+              aria-controls="pane-contact"
+            >
+              <span>contact</span>
+              <span class="tab-arrow" aria-hidden="true"></span>
+            </button>
+            <section class="pane" id="pane-contact" data-pane="contact">
             <p class="eyebrow">Contact</p>
             <div class="contact-links" aria-label="Contact links">
               <a class="contact-link" href="#" aria-label="LinkedIn">
